@@ -1,0 +1,103 @@
+<div class="container">
+
+  <div class="row">
+
+    <!-- Blog Entries Column  ng-class="generateClass();" -->
+    <div class="col-sm-8">
+      <div ng-repeat="post in blog.posts | orderBy:'-created' | filter: blog.searchKeyword" random-panel-class="blog.classes" class="panel shadow-z-2">
+        <div class="panel-heading">
+          <h3 class="panel-title"> {{post.title}} 
+            <small>{{post.subtitle}}</small></h3>
+          <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-xs-6">
+              <p class="lead">
+                by {{post.author}}
+              </p>
+            </div>
+            <div class="col-xs-6">
+              <p><span class="glyphicon glyphicon-time"></span> Posted on 
+                {{post.time}}</p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="panel-body">
+          <div ng-if="post.imgurl">
+            <hr>
+            <img  class="img-responsive" src="{{post.imgurl}}" alt="">
+          </div>
+          <hr>
+
+          <p>{{post.content}}</p>
+
+        </div>
+        <div class="home-card panel-footer">
+          <a ng-click="" class="btn btn-material-orange btn-fab btn-raised mdi-communication-quick-contacts-mail"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-sm-4">
+
+      <!-- Blog Search Well -->
+      <div class="well">
+        <h4>Blog Search</h4>
+        <div class="input-group">
+          <input ng-model="blog.searchKeyword" type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+        <!-- /.input-group -->
+      </div>
+
+      <!-- Blog Categories Well -->
+      <div class="well">
+        <h4>Blog Categories</h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled">
+              <li class="animate-list" ng-repeat="item in blog.posts | unique:'category'">
+                <h4><a ng-click="blog.searchKeyword = item.category">{{item.category}}</a></h4>
+              </li>
+            </ul>
+          </div>
+          <!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+            <ul class="list-unstyled">
+              <li><a href="#">Category Name</a>
+              </li>
+              <li><a href="#">Category Name</a>
+              </li>
+              <li><a href="#">Category Name</a>
+              </li>
+              <li><a href="#">Category Name</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+      </div>
+
+      <!-- Side Widget Well -->
+      <div class="well">
+        <h4>Side Widget Well</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+
+</div>

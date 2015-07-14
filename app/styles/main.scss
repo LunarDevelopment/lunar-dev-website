@@ -1,0 +1,207 @@
+
+$icon-font-path: "../bower_components/bootstrap/fonts/bootstrap/";
+// bower:scss
+// endbower
+
+.align-middle {
+  vertical-align:middle;
+}
+
+#floating-action-button .btn {
+  position: fixed;
+  right: 0;
+  margin-right: 50px;
+  z-index: 100;
+}
+
+#floating-action-button h2 {
+  padding: 14px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.homepage-panel {
+  min-height: 200px;
+}
+
+.home-card {
+  align-content: center;
+  text-align: center;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.long {
+  max-width: 55%;
+}
+
+.mid {
+  max-width: 20%;
+}
+
+.short {
+  max-width: 10%;
+}
+
+.display-img {
+  max-height: 100px;
+}
+
+.jumbotron {
+  text-align: center;
+  .img-box {
+    text-align: center;
+  }
+  .text-box {
+    text-align: left;
+  }
+  img {
+    max-width: 100%;
+    max-height: 200px;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: initial;
+  }
+}
+
+.github {
+  background-color: rgba(152, 221, 255, 0.25) !important;
+}
+
+.linked-in {
+  //background-color: #007bb6 !important;
+  background-color: rgba(0, 123, 182, 0.25) !important;
+}
+
+.facebook {
+  //background-color: #3b5998 !important;
+  background-color: rgba(59, 89, 152, 0.25) !important;
+}
+
+.twitter {
+  //background-color: #00aced !important;
+  background-color: rgba(0, 172, 237, 0.25) !important;
+}
+
+/* Projects list screen */
+.animate-enter, 
+.animate-leave
+{ 
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space:nowrap;
+} 
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+.animate-enter.animate-enter-active, 
+.animate-leave {
+  opacity: 1;
+  width: 150px;
+  height: 30px;
+}
+
+.animate-list.ng-move,
+.animate-list.ng-enter,
+.animate-list.ng-leave {
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+.animate-list.ng-leave.ng-leave-active,
+.animate-list.ng-move,
+.animate-list.ng-enter {
+  opacity: 0;
+  right: -50px;
+  height: 0px;
+}
+
+.animate-list.ng-leave,
+.animate-list.ng-move.ng-move-active,
+.animate-list.ng-enter.ng-enter-active {
+  opacity: 1;
+  right: 0;
+  height: 30px;
+}
+/* striped background */
+/*
+body {
+background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 10px 10px;
+}
+*/
+/* logo font */
+/*
+.neon-glow {
+color: $brand-primary !important;
+font-family: $font-family-baller;   
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+transition: 0.5s;
+&:hover,
+&:focus,
+&.focus,
+&.hover {
+color:$light !important;
+-webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+-moz-animation: neon4 1.5s ease-in-out infinite alternate;
+animation: neon4 1.5s ease-in-out infinite alternate;
+}
+}
+*/
+
+@-webkit-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+
+@-moz-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+
+@keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
